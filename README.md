@@ -3,14 +3,23 @@
 Sistema integral de gestión de Recursos Humanos con un panel principal de acceso
 a los distintos módulos/trámites del personal.
 
-## Estado actual (v0.1)
+## Estado actual (v0.2)
 
-Panel principal con diseño oscuro *glassmorphism* y dos paneles iniciales:
+Panel principal con diseño oscuro *glassmorphism* y dos paneles:
 
-- **Cambios Administrativos**
-- **Comisión de Servicios**
+- **Cambios Administrativos** — en construcción
+- **Comisión de Servicios** — **activo**: sistematización de la matriz de Excel
+  de comisiones de servicio sin RMU, con registro de personas/períodos y control
+  del límite legal de 6 años. Ver `sistema/LOGICA-comision-servicios.md`.
 
 > Los paneles se irán agregando y conectando entre sí progresivamente.
+
+### Sistema publicado (versión usable)
+
+El sistema completo y funcional (con almacenamiento persistente) vive en
+`sistema/sistema-rh.html` y se publica como Artifact de Claude. La carpeta
+`sistema/` contiene además los datos de carga inicial y la documentación de la
+lógica; `docs/matriz-original.xlsx` conserva el Excel original.
 
 ## Estructura del proyecto
 
