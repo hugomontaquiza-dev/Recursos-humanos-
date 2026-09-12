@@ -51,10 +51,26 @@ Para cada persona, a partir de sus períodos:
 | **N° de períodos** | Conteo de períodos de la cédula |
 | **Días acumulados** | `Σ (fin − inicio + 1)` de cada período |
 | **Años acumulados** | `Días acumulados / 365.25` (1 decimal) |
-| **Fecha límite legal (6 años)** | `EDATE(inicio 1ª, 72 meses)` |
-| **Días restantes al límite** | `Fecha límite − HOY` |
+| **Fecha límite legal (6 años)** | Comisión continua: `EDATE(inicio 1ª, 72 meses)` |
 | **Días restantes comisión actual** | `Fecha fin actual − HOY` |
 | **Continuidad** | `CONTINUA` si `|Días acum − (fin actual − inicio 1ª + 1)| ≤ 3`; si no, `CON INTERRUPCIONES` |
+
+### Límite legal según continuidad (días efectivos)
+
+El límite legal (6 años = **2192 días** ≈ 6 × 365.25) se evalúa de dos formas:
+
+- **Comisión continua** (sin interrupciones): se proyecta por **calendario**,
+  `Fecha límite = inicio 1ª + 6 años`, y `Días restantes = Fecha límite − HOY`
+  (idéntico al Excel original).
+- **Comisión con interrupciones** (la persona regresó a la institución y volvió
+  a salir): se cuentan los **días efectivos fuera** de la institución
+  (suma de los días de todos sus períodos), y
+  `Días efectivos restantes = 2192 − Días efectivos`. En este caso la columna
+  "Límite legal" muestra *"Días efectivos"* en lugar de una fecha corrida,
+  porque el tope se alcanza por tiempo efectivo fuera, no por fecha de calendario.
+
+Los semáforos del estado del límite usan el mismo umbral en ambos casos
+(≤0 🔴, ≤180 🟠, ≤365 🟡, resto 🟢), aplicado a los días restantes correspondientes.
 
 ### Semáforos
 
