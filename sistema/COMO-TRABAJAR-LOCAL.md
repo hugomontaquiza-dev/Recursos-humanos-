@@ -53,12 +53,56 @@ Si quieres todos los archivos (no solo el sistema local):
 
 ---
 
-## Opción C — Seguir desarrollando en tu laptop (avanzado)
+## Opción C — Seguir desarrollando con Claude desde tu laptop
 
-Si más adelante quieres seguir construyendo el sistema desde tu computadora con
-ayuda de Claude, puedes instalar **Claude Code** (app de escritorio o extensión)
-y conectar este mismo repositorio. Con eso trabajarías los archivos localmente y
-podrías subir cambios a GitHub. (Podemos verlo paso a paso cuando quieras.)
+Para continuar construyendo el sistema (no solo usarlo) desde tu computadora,
+con la misma ayuda de Claude, instala **Claude Code** y abre este repositorio.
+Al abrirlo, Claude leerá el archivo `CLAUDE.md` y entenderá **todo lo que hemos
+hecho**, para continuar sin empezar de cero.
+
+### 1) Instalar la app de escritorio de Claude (lo más simple)
+
+1. Ve a **https://claude.ai/download** y descarga la app para tu sistema
+   (Windows o macOS).
+2. Instálala y **inicia sesión** con tu misma cuenta (`hugomontaquiza@gmail.com`).
+3. Abre **Claude Code** dentro de la app.
+
+### 2) Conectar este proyecto
+
+Tienes dos caminos:
+
+- **Con GitHub (recomendado):** en Claude Code, elige abrir un proyecto desde
+  GitHub y selecciona el repositorio
+  `hugomontaquiza-dev/Recursos-humanos-`, rama
+  `claude/hr-system-dashboard-huewet`. Así tus cambios quedan respaldados en la
+  nube de GitHub automáticamente.
+- **Con la carpeta descargada:** si ya bajaste el ZIP (Opción B), en Claude Code
+  abre esa carpeta como proyecto.
+
+### 3) Continuar el trabajo
+
+Escríbele a Claude, por ejemplo:
+> "Lee el CLAUDE.md y continuemos con el sistema de Recursos Humanos. Quiero
+> agregar el panel de Cambios Administrativos."
+
+Claude ya tendrá el contexto (qué es el sistema, la lógica, los datos y los
+próximos pasos).
+
+> **Nota:** el *historial de este chat* no se copia solo, pero **toda la
+> información importante** (programa, datos, lógica y decisiones) está en el
+> repositorio y en `CLAUDE.md`, así que el trabajo continúa sin problema.
+
+### Alternativa técnica (línea de comandos)
+
+Si prefieres la terminal y tienes Node.js instalado:
+
+```
+npm install -g @anthropic-ai/claude-code
+git clone https://github.com/hugomontaquiza-dev/Recursos-humanos-.git
+cd Recursos-humanos-
+git checkout claude/hr-system-dashboard-huewet
+claude
+```
 
 ---
 
