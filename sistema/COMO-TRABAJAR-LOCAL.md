@@ -67,19 +67,31 @@ hecho**, para continuar sin empezar de cero.
 2. Instálala y **inicia sesión** con tu misma cuenta (`hugomontaquiza@gmail.com`).
 3. Abre **Claude Code** dentro de la app.
 
-### 2) Conectar este proyecto
+### 2) Descargar el proyecto a una carpeta local
 
-Tienes dos caminos:
+En la app de escritorio se abre **una carpeta local**, no se "importa desde
+GitHub". Así que primero baja el proyecto:
 
-- **Con GitHub (recomendado):** en Claude Code, elige abrir un proyecto desde
-  GitHub y selecciona el repositorio
-  `hugomontaquiza-dev/Recursos-humanos-`, rama
-  `claude/hr-system-dashboard-huewet`. Así tus cambios quedan respaldados en la
-  nube de GitHub automáticamente.
-- **Con la carpeta descargada:** si ya bajaste el ZIP (Opción B), en Claude Code
-  abre esa carpeta como proyecto.
+1. Entra a `https://github.com/hugomontaquiza-dev/Recursos-humanos-`.
+2. Selector de **ramas** (arriba a la izquierda) → elige
+   `claude/hr-system-dashboard-huewet`.
+3. Botón verde **Code** → **Download ZIP**.
+4. En Windows: clic derecho al `.zip` → **Extraer todo…** → **Extraer**.
+   Guarda la carpeta en, por ejemplo, **Documentos**.
 
-### 3) Continuar el trabajo
+### 3) Abrir la carpeta en Claude Code
+
+1. Clic en **➕ New session** (o **Ctrl + N**).
+2. **Environment / Entorno**: elige **Local**.
+3. **Project folder / Carpeta del proyecto**: **Seleccionar carpeta** → elige la
+   carpeta que extrajiste.
+4. Deja **Model** y **Permission mode** como estén.
+
+> Nota: al abrir la carpeta del ZIP trabajas localmente. Para respaldar tus
+> cambios en GitHub más adelante hay que configurar Git (opcional; se puede ver
+> paso a paso después).
+
+### 4) Continuar el trabajo
 
 Escríbele a Claude, por ejemplo:
 > "Lee el CLAUDE.md y continuemos con el sistema de Recursos Humanos. Quiero
